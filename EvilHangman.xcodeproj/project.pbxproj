@@ -1,0 +1,264 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E3AE5042160E2837000308E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3AE5041160E2837000308E0 /* UIKit.framework */; };
+		E3AE5044160E2837000308E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3AE5043160E2837000308E0 /* Foundation.framework */; };
+		E3AE5046160E2837000308E0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3AE5045160E2837000308E0 /* CoreGraphics.framework */; };
+		E3AE504C160E2837000308E0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E3AE504A160E2837000308E0 /* InfoPlist.strings */; };
+		E3AE504E160E2837000308E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3AE504D160E2837000308E0 /* main.m */; };
+		E3AE5052160E2837000308E0 /* EhAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3AE5051160E2837000308E0 /* EhAppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E3AE503D160E2837000308E0 /* EvilHangman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EvilHangman.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3AE5041160E2837000308E0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E3AE5043160E2837000308E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E3AE5045160E2837000308E0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E3AE5049160E2837000308E0 /* EvilHangman-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EvilHangman-Info.plist"; sourceTree = "<group>"; };
+		E3AE504B160E2837000308E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E3AE504D160E2837000308E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E3AE504F160E2837000308E0 /* EvilHangman-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EvilHangman-Prefix.pch"; sourceTree = "<group>"; };
+		E3AE5050160E2837000308E0 /* EhAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EhAppDelegate.h; sourceTree = "<group>"; };
+		E3AE5051160E2837000308E0 /* EhAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EhAppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E3AE503A160E2837000308E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3AE5042160E2837000308E0 /* UIKit.framework in Frameworks */,
+				E3AE5044160E2837000308E0 /* Foundation.framework in Frameworks */,
+				E3AE5046160E2837000308E0 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E3AE5032160E2837000308E0 = {
+			isa = PBXGroup;
+			children = (
+				E3AE5047160E2837000308E0 /* EvilHangman */,
+				E3AE5040160E2837000308E0 /* Frameworks */,
+				E3AE503E160E2837000308E0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E3AE503E160E2837000308E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E3AE503D160E2837000308E0 /* EvilHangman.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E3AE5040160E2837000308E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3AE5041160E2837000308E0 /* UIKit.framework */,
+				E3AE5043160E2837000308E0 /* Foundation.framework */,
+				E3AE5045160E2837000308E0 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3AE5047160E2837000308E0 /* EvilHangman */ = {
+			isa = PBXGroup;
+			children = (
+				E3AE5050160E2837000308E0 /* EhAppDelegate.h */,
+				E3AE5051160E2837000308E0 /* EhAppDelegate.m */,
+				E3AE5048160E2837000308E0 /* Supporting Files */,
+			);
+			path = EvilHangman;
+			sourceTree = "<group>";
+		};
+		E3AE5048160E2837000308E0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E3AE5049160E2837000308E0 /* EvilHangman-Info.plist */,
+				E3AE504A160E2837000308E0 /* InfoPlist.strings */,
+				E3AE504D160E2837000308E0 /* main.m */,
+				E3AE504F160E2837000308E0 /* EvilHangman-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E3AE503C160E2837000308E0 /* EvilHangman */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3AE5055160E2837000308E0 /* Build configuration list for PBXNativeTarget "EvilHangman" */;
+			buildPhases = (
+				E3AE5039160E2837000308E0 /* Sources */,
+				E3AE503A160E2837000308E0 /* Frameworks */,
+				E3AE503B160E2837000308E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EvilHangman;
+			productName = EvilHangman;
+			productReference = E3AE503D160E2837000308E0 /* EvilHangman.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E3AE5034160E2837000308E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Lolcat, Inc.";
+			};
+			buildConfigurationList = E3AE5037160E2837000308E0 /* Build configuration list for PBXProject "EvilHangman" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E3AE5032160E2837000308E0;
+			productRefGroup = E3AE503E160E2837000308E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E3AE503C160E2837000308E0 /* EvilHangman */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E3AE503B160E2837000308E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3AE504C160E2837000308E0 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E3AE5039160E2837000308E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3AE504E160E2837000308E0 /* main.m in Sources */,
+				E3AE5052160E2837000308E0 /* EhAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E3AE504A160E2837000308E0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E3AE504B160E2837000308E0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E3AE5053160E2837000308E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E3AE5054160E2837000308E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E3AE5056160E2837000308E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EvilHangman/EvilHangman-Prefix.pch";
+				INFOPLIST_FILE = "EvilHangman/EvilHangman-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E3AE5057160E2837000308E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EvilHangman/EvilHangman-Prefix.pch";
+				INFOPLIST_FILE = "EvilHangman/EvilHangman-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E3AE5037160E2837000308E0 /* Build configuration list for PBXProject "EvilHangman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3AE5053160E2837000308E0 /* Debug */,
+				E3AE5054160E2837000308E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3AE5055160E2837000308E0 /* Build configuration list for PBXNativeTarget "EvilHangman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3AE5056160E2837000308E0 /* Debug */,
+				E3AE5057160E2837000308E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E3AE5034160E2837000308E0 /* Project object */;
+}
