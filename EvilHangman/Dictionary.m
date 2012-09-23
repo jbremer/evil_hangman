@@ -19,7 +19,6 @@
         guessedletters = calloc(1, sizeof(char)*27);
         dict = [NSMutableArray arrayWithCapacity:100];
         possiblewords = [NSMutableArray arrayWithCapacity:100];
-       // ourword = 0;
     }
     
     //Initialize the Dictionary @TODO pthreads
@@ -50,11 +49,15 @@
     }
     userword[i]='\0';
     
-    for (NSString * word in dict) {
-        if ([word length] == length)
-            [possiblewords addObject:word];
+    //Honest mode implementation is easypeasy
+    if (difficulty==0) {
+        [possiblewords addObject:ourword];
+    } else {
+        for (NSString * word in dict) {
+            if ([word length] == length)
+                [possiblewords addObject:word];
+        }
     }
-    
 }
 
 - (bool) guessLetter:(char)letter {
@@ -64,11 +67,10 @@
     
     strcat(guessedletters, letterstring);
     
-    //if the letter is found, check for a word that is not yet found and replace ourword
+    //check for a word that is not yet found and replace ourword
     for (NSString * word in possiblewords) {
         if ([word rangeOfString:[NSString stringWithUTF8String:letterstring]].location
                 == NSNotFound) {        
-            //ourword = word;
             notfound = 1;
             break;
         }
