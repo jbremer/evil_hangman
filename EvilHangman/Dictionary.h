@@ -9,26 +9,36 @@
 #import <Foundation/Foundation.h>
 #import <pthread.h>
 
+//Pthread that bitch n make some nice dict without lag yes? (This happens in the 
+//Initializer)
 @interface Dictionary : NSObject
 {
     /*Contains the word that should be printed, Has _ instead of letter
-     When the letter is not yet guessed. Default = hangman*/
-    NSString * word;
+     When the letter is not yet guessed. */
+    char * userword;
     
     /* The difficulty is used to distinguish between 3 modes,
-     Namely Evil (2), Semi-evil (1) and honest (0). Default = 2*/
+     Namely Evil (2), Semi-evil (1) and honest (0). Default = 1*/
     int difficulty;
     
-    int guessedletters;
+    //Null terminated string with already guessed letters
+    char * guessedletters;
+    
+    @private
+    NSMutableArray * dict;
+   
+    @private
+    NSMutableArray * possiblewords;
+    
+    @private 
+   // NSString * ourword;
 } 
 
-//Pthread that bitch n make some nice dict without lag yes?
-void Dictionary();
-
 //Initializes the word to a certain length, empties already guessed letters
-NSString * initWord(int length);
+- (void)initWord;
+
 
 //gues a letter! Returns true if the word is guessed
-bool guessLetter(char letter);
+- (bool)guessLetter:(char)letter;
 
 @end
