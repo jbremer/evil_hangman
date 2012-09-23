@@ -63,24 +63,28 @@
 - (bool) guessLetter:(char)letter {
     char letterstring[2] = {0};
     letterstring[0] = letter;
+    NSString * nsletterstring = [NSString stringWithUTF8String:letterstring];
     int notfound = 0;
+    int occurence = 0;
+    
     
     strcat(guessedletters, letterstring);
     
     //check for a word that is not yet found and replace ourword
     for (NSString * word in possiblewords) {
-        if ([word rangeOfString:[NSString stringWithUTF8String:letterstring]].location
+        if ([word rangeOfString:nsletterstring].location
                 == NSNotFound) {        
             notfound = 1;
-            break;
+            if (difficulty == 2) {
+                occurence = [[word componentsSeparatedByString:nsletterstring] count] -1;
+            }
         }
     }
     
     //Remove all words with the letter if we have at least one entry left without the letter
     if (notfound) {
         for (int i = 0; i < [possiblewords count]; i++) {
-            if ([[possiblewords objectAtIndex:i] rangeOfString:[NSString 
-                    stringWithUTF8String:letterstring]].location != NSNotFound) {
+            if ([[possiblewords objectAtIndex:i] rangeOfString:nsletterstring].location !=NSNotFound) {
                 [possiblewords removeObjectAtIndex:i];
             }
         }
@@ -89,7 +93,12 @@
     } else {
         
         //Choose a word to use if we must fill in the letter @TODO not random?
-        NSString * ourword = [possiblewords objectAtIndex:arc4random() % [possiblewords count]];
+        NSString * ourword;
+        do{
+            ourword = [possiblewords objectAtIndex:arc4random() % [possiblewords count]];
+        }while(difficulty == 2 && [[ourword componentsSeparatedByString:nsletterstring] count] -1
+               != occurence); 
+        
         int indices[10] = {0};
         int j = 0;
         
