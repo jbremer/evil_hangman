@@ -7,6 +7,7 @@
 //
 
 #import "EhAppDelegate.h"
+#import "MenuScreen.h"
 
 @implementation EhAppDelegate
 
@@ -17,6 +18,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    UITableViewController *menu = [[MenuScreen alloc] init];
+    [self.window addSubview:[menu view]];
     [self.window makeKeyAndVisible];
     return YES;
 }
