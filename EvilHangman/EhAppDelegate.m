@@ -19,7 +19,9 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     UITableViewController *menu = [[MenuScreen alloc] init];
-    [self.window addSubview:[menu view]];
+    menu.title = @"Evil Hangman";
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:menu];
+    [self.window setRootViewController:navigationController];
     [self.window makeKeyAndVisible];
     return YES;
 }

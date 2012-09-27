@@ -7,6 +7,7 @@
 //
 
 #import "MenuScreen.h"
+#import "PlayScreen.h"
 
 @implementation MenuScreen
 
@@ -33,7 +34,13 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"Selected %d", indexPath.row);
+    UIViewController *viewController;
+    switch (indexPath.row) {
+        case 0:
+            viewController = [[PlayScreen alloc] init];
+            [self.navigationController pushViewController:viewController animated:YES];
+            break;
+    }
 }
 
 @end
