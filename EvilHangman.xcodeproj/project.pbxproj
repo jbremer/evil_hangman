@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E39572E216135533001EF54B /* MenuScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = E39572E116135533001EF54B /* MenuScreen.m */; };
 		D9F6112B160F17BD00D59BAD /* Dictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F6112A160F17BD00D59BAD /* Dictionary.m */; };
+		E389E4F0161C360F0038FF93 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = E389E4EF161C360F0038FF93 /* words.txt */; };
+		E39572E216135533001EF54B /* MenuScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = E39572E116135533001EF54B /* MenuScreen.m */; };
 		E3AE5042160E2837000308E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3AE5041160E2837000308E0 /* UIKit.framework */; };
 		E3AE5044160E2837000308E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3AE5043160E2837000308E0 /* Foundation.framework */; };
 		E3AE5046160E2837000308E0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3AE5045160E2837000308E0 /* CoreGraphics.framework */; };
@@ -19,10 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E39572E016135533001EF54B /* MenuScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuScreen.h; sourceTree = "<group>"; };
-		E39572E116135533001EF54B /* MenuScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuScreen.m; sourceTree = "<group>"; };
 		D9F61129160F17BD00D59BAD /* Dictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dictionary.h; sourceTree = "<group>"; };
 		D9F6112A160F17BD00D59BAD /* Dictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dictionary.m; sourceTree = "<group>"; };
+		E389E4EF161C360F0038FF93 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
+		E39572E016135533001EF54B /* MenuScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuScreen.h; sourceTree = "<group>"; };
+		E39572E116135533001EF54B /* MenuScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuScreen.m; sourceTree = "<group>"; };
 		E3AE503D160E2837000308E0 /* EvilHangman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EvilHangman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3AE5041160E2837000308E0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E3AE5043160E2837000308E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -54,6 +56,7 @@
 		E3AE5032160E2837000308E0 = {
 			isa = PBXGroup;
 			children = (
+				E389E4EF161C360F0038FF93 /* words.txt */,
 				E3AE5047160E2837000308E0 /* EvilHangman */,
 				E3AE5040160E2837000308E0 /* Frameworks */,
 				E3AE503E160E2837000308E0 /* Products */,
@@ -84,12 +87,12 @@
 				E3AE5050160E2837000308E0 /* EhAppDelegate.h */,
 				E3AE5051160E2837000308E0 /* EhAppDelegate.m */,
 				E3AE505F160E2F7A000308E0 /* PlayScreen.h */,
+				E3AE5060160E2F7A000308E0 /* PlayScreen.m */,
 				D9F61129160F17BD00D59BAD /* Dictionary.h */,
 				D9F6112A160F17BD00D59BAD /* Dictionary.m */,
-				E3AE5060160E2F7A000308E0 /* PlayScreen.m */,
-				E3AE5048160E2837000308E0 /* Supporting Files */,
 				E39572E016135533001EF54B /* MenuScreen.h */,
 				E39572E116135533001EF54B /* MenuScreen.m */,
+				E3AE5048160E2837000308E0 /* Supporting Files */,
 			);
 			path = EvilHangman;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3AE504C160E2837000308E0 /* InfoPlist.strings in Resources */,
+				E389E4F0161C360F0038FF93 /* words.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

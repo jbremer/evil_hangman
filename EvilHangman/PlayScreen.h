@@ -7,12 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Dictionary.h"
 
 @interface PlayScreen : UIViewController <UIKeyInput> {
-    NSString *word; // temporary
-    int wordlen;
-
-    char letters[26]; // contains used letters
+    Dictionary *dict;
 }
 
 @end

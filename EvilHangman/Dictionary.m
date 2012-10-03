@@ -10,20 +10,19 @@
 
 @implementation Dictionary
 
+@synthesize userword;
+
 -(id)init {
     self = [super init];
     if(self) {
         difficulty = 1;
-        dict = [NSMutableArray arrayWithCapacity:100];
-        possiblewords = [NSMutableArray arrayWithCapacity:100];
+        possiblewords = [[NSMutableArray alloc] initWithCapacity:100];
 
         //Initialize the Dictionary @TODO pthreads
-        FILE *fp = fopen("words", "r");
-        char next[100];
-        while (fgets(next, 100, fp)) {
-            [dict addObject:[NSString stringWithUTF8String:next]];
-        }
-        fclose(fp);
+        // Such a lovely implementation... ;D
+        NSString *file_name = [[NSBundle mainBundle] pathForResource:@"words" ofType:@"txt"];
+        NSString *file_contents = [NSString stringWithContentsOfFile:file_name encoding:NSUTF8StringEncoding error:nil];
+        dict = [file_contents componentsSeparatedByString:@"\n"];
     }
     return self;
 }
@@ -37,9 +36,9 @@
     int index = arc4random() % [dict count];
     NSString *ourword = [dict objectAtIndex:index];
 
-    userword[ourword.length] = 0;
+    userword = [[NSMutableString alloc] init];
     for (int i = 0; i < ourword.length; i++) {
-        userword[i] = '_';
+        [userword appendString:@"*"];
     }
 
     //Honest mode implementation is easypeasy
@@ -55,61 +54,66 @@
     }
 }
 
--(bool)guessLetter:(char)letter {
-    char letterstring[2] = {letter, 0};
+-(bool)guessLetter:(unichar)ch {
     int notfound = 0;
 
-    strcat(guessedletters, letterstring);
+    if(ch < 'a' || ch > 'z') {
+        // TODO: notify user
+        return false;
+    }
 
-    //check for a word that is not yet found and replace ourword
+    if(guessedletters[ch - 'a'] != 0) {
+        // already guessed this letter
+        return false;
+    }
+
+    guessedletters[ch - 'a'] = 1;
+
+    NSString *s = [NSString stringWithCharacters:&ch length:1];
+
+    // check for a word that is not yet found
     for (NSString *word in possiblewords) {
-        if([word rangeOfString:[NSString stringWithUTF8String:letterstring]].location == NSNotFound) {
+        if([word rangeOfString:s].location == NSNotFound) {
             notfound = 1;
             break;
         }
     }
 
-    //Remove all words with the letter if we have at least one entry left without the letter
     if(notfound) {
-        for (int i = 0; i < [possiblewords count]; i++) {
-            if([[possiblewords objectAtIndex:i] rangeOfString:[NSString
-                    stringWithUTF8String:letterstring]].location != NSNotFound) {
+        // remove all words with the letter if we have at least one entry left without the letter
+        for (int i = 0; i < possiblewords.count; i++) {
+            if([[possiblewords objectAtIndex:i] rangeOfString:s].location != NSNotFound) {
                 [possiblewords removeObjectAtIndex:i];
             }
         }
         return false;
     }
     else {
-
-        //Choose a word to use if we must fill in the letter @TODO not random?
+        // choose a word to use if we must fill in the letter
+        // TODO: not random?
         NSString *ourword = [possiblewords objectAtIndex:arc4random() % [possiblewords count]];
         int indices[10] = {0}, j = 0;
 
-        //Fill it and remember where
+        // fill it and remember where
         for (int i = 0; i < ourword.length; i++) {
-            if([ourword characterAtIndex:i] == letter) {
-                userword[i] = letter;
+            if([ourword characterAtIndex:i] == ch) {
+                [userword replaceCharactersInRange:NSMakeRange(i, 1) withString:s];
                 indices[j++] = i;
             }
         }
 
-        //Remove words that dont have the characters at the same place
-        for (int i = 0; i < [possiblewords count]; i++) {
-            NSString * word = [possiblewords objectAtIndex:i];
-            for (int k = j ; k < j ; k++) {
-                if([word characterAtIndex:indices[k]] != letter) {
+        // remove words that dont have the characters at the same place
+        for (int i = 0; i < possiblewords.count; i++) {
+            NSString *word = [possiblewords objectAtIndex:i];
+            for (int k = j; k < j; k++) {
+                if([word characterAtIndex:indices[k]] != ch) {
                     [possiblewords removeObjectAtIndex:i];
                 }
             }
         }
 
-        //Check if the user guessed the whole word
-        for (int i = 0 ; i < strlen(userword); i++) {
-            if(userword[i] == '_') {
-                return false;
-            }
-        }
-        return true;
+        // check if the user guessed the whole word
+        return [userword rangeOfString:@"*"].location == NSNotFound;
     }
 }
 

@@ -11,26 +11,19 @@
 @implementation PlayScreen
 
 -(void)showWord {
-    char show_word[32] = {0};
-
-    for (int i = 0; i < word.length; i++) {
-        char ch = [word characterAtIndex:i];
-        show_word[i] = letters[ch - 'a'] ? ch : '*';
-    }
-
-    CGRect lbl_word_rect = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 40);
+    CGRect lbl_word_rect = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 80);
     UILabel *lbl_word = [[[UILabel alloc] initWithFrame:lbl_word_rect] autorelease];
-    [lbl_word setText:[NSString stringWithCString:show_word encoding:NSUTF8StringEncoding]];
-    [lbl_word setFont:[UIFont fontWithName:@"Courier New" size:(int)CGRectGetWidth(self.view.bounds)/wordlen]];
+    [lbl_word setText:dict.userword];
+    [lbl_word setFont:[UIFont fontWithName:@"Courier New" size:(int)CGRectGetWidth(self.view.bounds)/dict.userword.length]];
     [self.view addSubview:lbl_word];
 }
 
 -(void)insertText:(NSString *)text {
     char ch = [text characterAtIndex:0];
-    if(ch >= 'a' && ch <= 'z') {
-        letters[ch - 'a'] = 1;
-        [self showWord];
-    }
+    bool found = [dict guessLetter:ch];
+    [self showWord];
+
+    // TODO: do something with "found"
 }
 
 -(void)deleteBackward {
@@ -47,11 +40,9 @@
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if(self) {
-        word = @"hangman";
-        wordlen = 7;
+        dict = [[Dictionary alloc] init];
 
-        memset(letters, 0, sizeof(letters));
-
+        [dict initWord];
         [self showWord];
     }
     return self;
