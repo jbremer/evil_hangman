@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D9C812FC161DAA3700BAF537 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C812FB161DAA3700BAF537 /* Settings.m */; };
 		D9F6112B160F17BD00D59BAD /* Dictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F6112A160F17BD00D59BAD /* Dictionary.m */; };
 		E389E4F0161C360F0038FF93 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = E389E4EF161C360F0038FF93 /* words.txt */; };
 		E39572E216135533001EF54B /* MenuScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = E39572E116135533001EF54B /* MenuScreen.m */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D9C812FA161DAA3700BAF537 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		D9C812FB161DAA3700BAF537 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		D9F61129160F17BD00D59BAD /* Dictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dictionary.h; sourceTree = "<group>"; };
 		D9F6112A160F17BD00D59BAD /* Dictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dictionary.m; sourceTree = "<group>"; };
 		E389E4EF161C360F0038FF93 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
@@ -92,6 +95,8 @@
 				D9F6112A160F17BD00D59BAD /* Dictionary.m */,
 				E39572E016135533001EF54B /* MenuScreen.h */,
 				E39572E116135533001EF54B /* MenuScreen.m */,
+				D9C812FA161DAA3700BAF537 /* Settings.h */,
+				D9C812FB161DAA3700BAF537 /* Settings.m */,
 				E3AE5048160E2837000308E0 /* Supporting Files */,
 			);
 			path = EvilHangman;
@@ -176,6 +181,7 @@
 				E3AE5061160E2F7A000308E0 /* PlayScreen.m in Sources */,
 				E39572E216135533001EF54B /* MenuScreen.m in Sources */,
 				D9F6112B160F17BD00D59BAD /* Dictionary.m in Sources */,
+				D9C812FC161DAA3700BAF537 /* Settings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 
 #import "MenuScreen.h"
 #import "PlayScreen.h"
+#import "Settings.h"
 
 @implementation MenuScreen
 
@@ -38,6 +39,10 @@
     switch (indexPath.row) {
         case 0:
             viewController = [[PlayScreen alloc] init];
+            [self.navigationController pushViewController:viewController animated:YES];
+            break;
+        case 2:
+            viewController = [[Settings alloc] init];
             [self.navigationController pushViewController:viewController animated:YES];
             break;
     }
