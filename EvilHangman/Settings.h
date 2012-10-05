@@ -7,9 +7,10 @@
 //
 #import <UIKit/UIKit.h>
 
-@interface Settings : UITableViewController <UITableViewDelegate> {
+@interface Settings : UIViewController {
     UILabel *sliderlabel;
     UILabel *difficultylabel;
+    NSUserDefaults * prefs;
 }
 
 @property (nonatomic, retain) UILabel *sliderLabel;
