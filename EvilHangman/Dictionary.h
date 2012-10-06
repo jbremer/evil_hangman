@@ -12,13 +12,6 @@
 //Pthread that bitch n make some nice dict without lag yes? (This happens in the 
 //Initializer)
 @interface Dictionary : NSObject {
-    // The difficulty is used to distinguish between 3 modes,
-    // 0 -> Honest
-    // 1 -> Semi-evil
-    // 2 -> Evil
-    // By default the mode is set to 1
-    int difficulty;
-    
     //Null terminated string with already guessed letters
     bool guessedletters[26];
     
@@ -40,5 +33,12 @@
 - (int)guessLetter:(unichar)letter;
 
 @property(copy) NSMutableString *userword;
+
+// The difficulty is used to distinguish between 3 modes,
+// 0 -> Honest
+// 1 -> Semi-evil
+// 2 -> Evil
+// By default the mode is set to 1
+@property int difficulty;
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D925102B16203E96009D9E76 /* words1.txt in Resources */ = {isa = PBXBuildFile; fileRef = D925102A16203E96009D9E76 /* words1.txt */; };
 		D9C812FC161DAA3700BAF537 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C812FB161DAA3700BAF537 /* Settings.m */; };
 		D9F6112B160F17BD00D59BAD /* Dictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F6112A160F17BD00D59BAD /* Dictionary.m */; };
 		E389E4F0161C360F0038FF93 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = E389E4EF161C360F0038FF93 /* words.txt */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D925102A16203E96009D9E76 /* words1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words1.txt; sourceTree = "<group>"; };
 		D9C812FA161DAA3700BAF537 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		D9C812FB161DAA3700BAF537 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		D9F61129160F17BD00D59BAD /* Dictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dictionary.h; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				E389E4EF161C360F0038FF93 /* words.txt */,
+				D925102A16203E96009D9E76 /* words1.txt */,
 				E3AE5047160E2837000308E0 /* EvilHangman */,
 				E3AE5040160E2837000308E0 /* Frameworks */,
 				E3AE503E160E2837000308E0 /* Products */,
@@ -166,6 +169,7 @@
 			files = (
 				E3AE504C160E2837000308E0 /* InfoPlist.strings in Resources */,
 				E389E4F0161C360F0038FF93 /* words.txt in Resources */,
+				D925102B16203E96009D9E76 /* words1.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

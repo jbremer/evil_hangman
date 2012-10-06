@@ -22,5 +22,6 @@
     // 5 -> word guessed
     int action;
 }
+-(void) Init;
 
 @end

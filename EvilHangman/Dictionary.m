@@ -11,6 +11,7 @@
 @implementation Dictionary
 
 @synthesize userword;
+@synthesize difficulty;
 
 -(id)init {
     self = [super init];
@@ -20,7 +21,7 @@
 
         //Initialize the Dictionary @TODO pthreads
         // Such a lovely implementation... ;D
-        NSString *file_name = [[NSBundle mainBundle] pathForResource:@"words" ofType:@"txt"];
+        NSString *file_name = [[NSBundle mainBundle] pathForResource:@"words1" ofType:@"txt"];
         NSString *file_contents = [NSString stringWithContentsOfFile:file_name encoding:NSUTF8StringEncoding error:nil];
         dict = [file_contents componentsSeparatedByString:@"\n"];
     }
