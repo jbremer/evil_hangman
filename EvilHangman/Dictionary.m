@@ -24,6 +24,7 @@
         NSString *file_name = [[NSBundle mainBundle] pathForResource:@"words1" ofType:@"txt"];
         NSString *file_contents = [NSString stringWithContentsOfFile:file_name encoding:NSUTF8StringEncoding error:nil];
         dict = [file_contents componentsSeparatedByString:@"\n"];
+        [dict retain];
     }
     return self;
 }
@@ -87,6 +88,7 @@
         for (int i = 0; i < possiblewords.count; i++) {
             if([[possiblewords objectAtIndex:i] rangeOfString:s].location != NSNotFound) {
                 [possiblewords removeObjectAtIndex:i];
+                i--;
             }
         }
         return 3;
@@ -101,16 +103,19 @@
         for (int i = 0; i < ourword.length; i++) {
             if([ourword characterAtIndex:i] == ch) {
                 [userword replaceCharactersInRange:NSMakeRange(i, 1) withString:s];
-                indices[j++] = i;
+                indices[j] = i;
+                j++;
             }
         }
 
         // remove words that dont have the characters at the same place
         for (int i = 0; i < possiblewords.count; i++) {
             NSString *word = [possiblewords objectAtIndex:i];
-            for (int k = j; k < j; k++) {
+            for (int k = 0; k < j; k++) {
                 if([word characterAtIndex:indices[k]] != ch) {
                     [possiblewords removeObjectAtIndex:i];
+                    i--;
+                    break;
                 }
             }
         }
@@ -124,4 +129,9 @@
     }
 }
 
+- (void)dealloc {
+    [possiblewords release];
+    [dict release];
+    [super dealloc];
+}
 @end

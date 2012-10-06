@@ -41,7 +41,7 @@ static NSString * labels[] = {@"", @"Not a valid character", @"Character already
     
     [self updateUI];
     
-    if (action == 6) {
+    if (action == 6 || action == 5) {
         UIButton * restart = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         restart.frame =CGRectMake(150, 120, 100, 40);
         [restart setTitle:@"Replay?" forState:UIControlStateNormal];
@@ -64,7 +64,6 @@ static NSString * labels[] = {@"", @"Not a valid character", @"Character already
 -(void)Init {
     prefs = [NSUserDefaults standardUserDefaults]; 
     triesleft = (int)[prefs floatForKey:@"slidervalue"];
-    dict = [[Dictionary alloc] init];
 
     if ([prefs boolForKey:@"difficulty"] == 1) {
         dict.difficulty = 2;
@@ -79,9 +78,14 @@ static NSString * labels[] = {@"", @"Not a valid character", @"Character already
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if(self) {
+        dict = [[Dictionary alloc] init];
         [self Init];
     }
     return self;
 }
 
+- (void)dealloc {
+    [dict release];
+    [super dealloc];
+}
 @end
