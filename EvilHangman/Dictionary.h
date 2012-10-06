@@ -20,7 +20,7 @@
     int difficulty;
     
     //Null terminated string with already guessed letters
-    char guessedletters[26];
+    bool guessedletters[26];
     
     NSArray *dict;
    
@@ -30,8 +30,14 @@
 //Initializes the word to a certain length, empties already guessed letters
 - (void)initWord;
 
-//gues a letter! Returns true if the word is guessed
-- (bool)guessLetter:(unichar)letter;
+// guess a letter! Returns:
+// 1 -> not a valid char
+// 2 -> char already guessed
+// 3 -> char not found
+// 4 -> char found
+// 5 -> word guessed
+
+- (int)guessLetter:(unichar)letter;
 
 @property(copy) NSMutableString *userword;
 

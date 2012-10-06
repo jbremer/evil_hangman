@@ -29,7 +29,9 @@
 
 -(void)initWord {
     //Clean everything
-    guessedletters[0] = 0;
+    for (int i = 0; i < 26; i++) {
+        guessedletters[i] = false;
+    }
     [possiblewords removeAllObjects];
 
     //Initialize everything
@@ -54,20 +56,20 @@
     }
 }
 
--(bool)guessLetter:(unichar)ch {
+-(int)guessLetter:(unichar)ch {
     int notfound = 0;
 
     if(ch < 'a' || ch > 'z') {
         // TODO: notify user
-        return false;
+        return 1;
     }
 
-    if(guessedletters[ch - 'a'] != 0) {
+    if(guessedletters[ch - 'a'] != false) {
         // already guessed this letter
-        return false;
+        return 2;
     }
 
-    guessedletters[ch - 'a'] = 1;
+    guessedletters[ch - 'a'] = true;
 
     NSString *s = [NSString stringWithCharacters:&ch length:1];
 
@@ -86,7 +88,7 @@
                 [possiblewords removeObjectAtIndex:i];
             }
         }
-        return false;
+        return 3;
     }
     else {
         // choose a word to use if we must fill in the letter
@@ -113,7 +115,11 @@
         }
 
         // check if the user guessed the whole word
-        return [userword rangeOfString:@"*"].location == NSNotFound;
+        if([userword rangeOfString:@"*"].location == NSNotFound) {
+            return 5;
+        } else {
+            return 4;
+        }
     }
 }
 
