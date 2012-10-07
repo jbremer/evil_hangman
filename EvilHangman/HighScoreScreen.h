@@ -10,9 +10,10 @@
 
 
 @interface Scores : NSObject {
-    int scores[10];
+    @public
+    int points[10];
     
-    char names[10][17];
+    NSString *names[10];
 }
 @end
 
