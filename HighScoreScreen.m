@@ -28,7 +28,7 @@
     if (self) {
         NSLog(@"sup");
         Scores *data = [[Scores alloc] init];
-        data = loadScores();
+        data = [self loadScores];
         
         CGRect screenRect = [[UIScreen mainScreen] bounds];
         CGFloat screenWidth = screenRect.size.width;
