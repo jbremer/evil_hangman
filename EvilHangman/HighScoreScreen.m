@@ -87,7 +87,7 @@
     herp->names[8] = @"Henk";
     herp->names[9] = @"Henkeh";
     
-    [self saveScores:herp];
+    [self saveScores:herp]; 
 
 }
 
