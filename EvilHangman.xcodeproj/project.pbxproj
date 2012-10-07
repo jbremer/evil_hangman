@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CEA5D5BE1621AB4C00FE5C89 /* HighScoreScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA5D5BD1621AB4C00FE5C89 /* HighScoreScreen.m */; };
+		CE6B151F162202FB0087B38D /* HighScoreScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6B151E162202FB0087B38D /* HighScoreScreen.m */; };
 		D925102B16203E96009D9E76 /* words1.txt in Resources */ = {isa = PBXBuildFile; fileRef = D925102A16203E96009D9E76 /* words1.txt */; };
 		D9C812FC161DAA3700BAF537 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C812FB161DAA3700BAF537 /* Settings.m */; };
 		D9F6112B160F17BD00D59BAD /* Dictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F6112A160F17BD00D59BAD /* Dictionary.m */; };
@@ -23,8 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CEA5D5BC1621AB4C00FE5C89 /* HighScoreScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HighScoreScreen.h; path = ../HighScoreScreen.h; sourceTree = "<group>"; };
-		CEA5D5BD1621AB4C00FE5C89 /* HighScoreScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HighScoreScreen.m; path = ../HighScoreScreen.m; sourceTree = "<group>"; };
+		CE6B151D162202FB0087B38D /* HighScoreScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighScoreScreen.h; sourceTree = "<group>"; };
+		CE6B151E162202FB0087B38D /* HighScoreScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighScoreScreen.m; sourceTree = "<group>"; };
 		D925102A16203E96009D9E76 /* words1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words1.txt; sourceTree = "<group>"; };
 		D9C812FA161DAA3700BAF537 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		D9C812FB161DAA3700BAF537 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
@@ -93,6 +93,8 @@
 		E3AE5047160E2837000308E0 /* EvilHangman */ = {
 			isa = PBXGroup;
 			children = (
+				CE6B151D162202FB0087B38D /* HighScoreScreen.h */,
+				CE6B151E162202FB0087B38D /* HighScoreScreen.m */,
 				E3AE5050160E2837000308E0 /* EhAppDelegate.h */,
 				E3AE5051160E2837000308E0 /* EhAppDelegate.m */,
 				E3AE505F160E2F7A000308E0 /* PlayScreen.h */,
@@ -103,8 +105,6 @@
 				E39572E116135533001EF54B /* MenuScreen.m */,
 				D9C812FA161DAA3700BAF537 /* Settings.h */,
 				D9C812FB161DAA3700BAF537 /* Settings.m */,
-				CEA5D5BC1621AB4C00FE5C89 /* HighScoreScreen.h */,
-				CEA5D5BD1621AB4C00FE5C89 /* HighScoreScreen.m */,
 				E3AE5048160E2837000308E0 /* Supporting Files */,
 			);
 			path = EvilHangman;
@@ -191,7 +191,7 @@
 				E39572E216135533001EF54B /* MenuScreen.m in Sources */,
 				D9F6112B160F17BD00D59BAD /* Dictionary.m in Sources */,
 				D9C812FC161DAA3700BAF537 /* Settings.m in Sources */,
-				CEA5D5BE1621AB4C00FE5C89 /* HighScoreScreen.m in Sources */,
+				CE6B151F162202FB0087B38D /* HighScoreScreen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

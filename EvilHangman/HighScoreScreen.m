@@ -9,7 +9,7 @@
 #import "HighScoreScreen.h"
 
 @implementation HighScoreScreen
-
+	
 - (void)saveScores:(Scores *)obj {
     NSData *myEncodedObject = [NSKeyedArchiver archivedDataWithRootObject:obj];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -32,7 +32,7 @@
         
         CGRect screenRect = [[UIScreen mainScreen] bounds];
         CGFloat screenWidth = screenRect.size.width;
-        // hello world label
+        
         UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, screenWidth, 50)];
         title.text = @"Highscore";
         title.textAlignment = UITextAlignmentCenter;
