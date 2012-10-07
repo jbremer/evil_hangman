@@ -8,6 +8,9 @@
 
 #import "HighScoreScreen.h"
 
+@implementation Scores
+@end
+
 @implementation HighScoreScreen
 	
 - (void)saveScores:(Scores *)obj {
