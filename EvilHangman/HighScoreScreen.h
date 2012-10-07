@@ -21,4 +21,4 @@
 - (Scores *)loadScores;
 - (void)saveScores:(Scores *)obj;
 - (id)init;
-@end 
+@end	
