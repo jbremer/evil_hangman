@@ -95,16 +95,16 @@
 			children = (
 				CE6B151D162202FB0087B38D /* HighScoreScreen.h */,
 				CE6B151E162202FB0087B38D /* HighScoreScreen.m */,
+				D9C812FA161DAA3700BAF537 /* Settings.h */,
+				D9C812FB161DAA3700BAF537 /* Settings.m */,
+				D9F6112A160F17BD00D59BAD /* Dictionary.m */,
+				D9F61129160F17BD00D59BAD /* Dictionary.h */,
 				E3AE5050160E2837000308E0 /* EhAppDelegate.h */,
 				E3AE5051160E2837000308E0 /* EhAppDelegate.m */,
 				E3AE505F160E2F7A000308E0 /* PlayScreen.h */,
 				E3AE5060160E2F7A000308E0 /* PlayScreen.m */,
-				D9F61129160F17BD00D59BAD /* Dictionary.h */,
-				D9F6112A160F17BD00D59BAD /* Dictionary.m */,
 				E39572E016135533001EF54B /* MenuScreen.h */,
 				E39572E116135533001EF54B /* MenuScreen.m */,
-				D9C812FA161DAA3700BAF537 /* Settings.h */,
-				D9C812FB161DAA3700BAF537 /* Settings.m */,
 				E3AE5048160E2837000308E0 /* Supporting Files */,
 			);
 			path = EvilHangman;

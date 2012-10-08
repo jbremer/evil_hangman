@@ -8,17 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-
-@interface Scores : NSObject {
-    @public
-    int points[10];
+@interface HighScoreScreen : UIViewController {
+    NSUserDefaults * prefs;
     
-    NSString *names[10];
 }
-@end
 
-@interface HighScoreScreen : UIViewController
-- (Scores *)loadScores;
-- (void)saveScores:(Scores *)obj;
-- (id)init;
-@end	
+@end
