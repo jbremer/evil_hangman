@@ -13,7 +13,7 @@
 - (id)init {
     self = [super init];
     if (self) {
-        [self durr];
+        [self faggotry];
         prefs = [NSUserDefaults standardUserDefaults];
         NSString *Score = [[NSString alloc] initWithString:[prefs stringForKey:@"scores"]];
         
