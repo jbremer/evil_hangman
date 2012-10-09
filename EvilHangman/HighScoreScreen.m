@@ -13,9 +13,10 @@
 - (id)init {
     self = [super init];
     if (self) {
-        [self faggotry];
+        //[self faggotry];
+        NSUserDefaults *prefs;
         prefs = [NSUserDefaults standardUserDefaults];
-        NSString *Score = [[NSString alloc] initWithString:[prefs stringForKey:@"scores"]];
+        NSString *Score = [prefs stringForKey:@"scores"];
         
         CGRect screenRect = [[UIScreen mainScreen] bounds];
         CGFloat screenWidth = screenRect.size.width;
@@ -37,8 +38,11 @@
     return self;
 }
 
+
+// Saving some random stuff to NSUserdefaults
 - (void)faggotry{
-    NSString *durr = [[NSString alloc] initWithString:@"Henk\t12"];
+    NSUserDefaults * prefs;
+    NSString *durr = @"Henk\t12";
     [prefs setString: durr forKey:@"scores"];
 }
 
