@@ -75,7 +75,7 @@
                 [newscore appendString:@"\n"];
             }
         // if all scores have been looped through but the score given with the arg has not been added yet: add
-        } else if (added == 0 && score != 0) {
+        } else if (added == 0 && score > 0) {
             [newscore appendString:name];
             [newscore appendString:@"\t"];
             [newscore appendString:[NSString stringWithFormat:@"%d",score]];
