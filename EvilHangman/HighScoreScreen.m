@@ -100,6 +100,8 @@
 
 // Check if given score is eligible for highscore
 - (bool) eligible : (int) score {
+    if (score < 1)
+        return false;
     NSUserDefaults * prefs = [NSUserDefaults standardUserDefaults];
     NSString *oldscore = [prefs objectForKey:@"scores"];
     NSCharacterSet *tabsnenters = [NSCharacterSet characterSetWithCharactersInString:@"\n\t"];
