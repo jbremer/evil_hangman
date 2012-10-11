@@ -13,6 +13,7 @@
 - (id)init {
     self = [super init];
     if (self) {
+        // test, delete this line for normal functionality
         [self unittest:@"Henkie" , 42];
         
         NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
@@ -39,7 +40,7 @@
 }
 
 
-// Saving some random stuff to NSUserdefaults
+// Try to add given player with given score
 - (bool) add : (NSString *)name, int score {
     if ([name rangeOfString:@"\n"].location != NSNotFound &&
         [name rangeOfString:@"\t"].location != NSNotFound)
@@ -97,7 +98,7 @@
     
 }
 
-// Saving some random stuff to NSUserdefaults
+// Check if given score is eligible for highscore
 - (bool) eligible : (int) score {
     NSUserDefaults * prefs = [NSUserDefaults standardUserDefaults];
     NSString *oldscore = [prefs objectForKey:@"scores"];
