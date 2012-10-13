@@ -12,7 +12,10 @@
 @interface PlayScreen : UIViewController <UIKeyInput> {
     Dictionary *dict;
     NSUserDefaults *prefs;
+    UIButton * restart;
+    UIButton * entername;
     int triesleft;
+    int score;
     
     // Action is the output of [dict guessletter]
     // 1 -> not a valid char
