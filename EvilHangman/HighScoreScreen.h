@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface HighScoreScreen : UIViewController {
-    
+    CGRect screenRect;
+    CGFloat screenWidth;
+    NSUserDefaults *prefs;
+    UILabel *title;
+    UIButton * button;
+    UILabel * playerlist;
 }
-
 @end
